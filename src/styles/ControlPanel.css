@@ -1,0 +1,135 @@
+.main-panel {
+    width: 95%;
+    display: flex;
+    justify-content: space-around;
+    margin: 10px auto;
+
+}
+
+.stakes {
+    width: 95%;
+    display: flex;
+    justify-content: end;
+    margin-right: 20px;
+}
+
+.control {
+    margin-left: 40px;
+    width: 95%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.stake-btn {
+    margin: 10px;
+    width: 80px;
+    height: 120px;
+    border: 1px solid black;
+    border-radius: 40px;
+    box-shadow: 5px 4px grey;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.play-btn {
+    margin: 10px 30px;
+    width: 150px;
+    height: 120px;
+    border: 1px solid black;
+    border-radius: 40px;
+    box-shadow: 5px 4px grey;
+    background-color: darkorange;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.hold-btn {
+    margin: 20px;
+    width: 100px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 5px 4px grey;
+    background-color: brown;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.increase {
+    background-color: forestgreen;
+}
+
+.decrease {
+    background-color: crimson;
+}
+
+.stake-btn:active {
+    box-shadow: 3px 2px grey;
+    font-weight: normal;
+}
+
+.play-btn:active {
+    box-shadow: 3px 2px grey;
+    font-weight: normal;
+}
+
+.hold-btn:active {
+    box-shadow: 3px 2px grey;
+    font-weight: normal;
+}
+
+.stake {
+    margin: 10px;
+    width: 80px;
+    height: 120px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 4px grey;
+    font-size: 50px;
+    font-weight: bolder;
+    background-color: aqua;
+    color: darkmagenta;
+    text-align: center;
+    padding-top: 35px;
+}
+
+.bank,
+.win {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.bank-screen {
+    margin: 10px;
+    width: 160px;
+    height: 80px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 4px grey;
+    font-size: 50px;
+    font-weight: bolder;
+    background-color: azure;
+    color: red;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.win-screen {
+    margin: 10px;
+    width: 160px;
+    height: 80px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 4px grey;
+    font-size: 50px;
+    font-weight: bolder;
+    background-color: ivory;
+    color: red;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.title {
+    text-align: center;
+}

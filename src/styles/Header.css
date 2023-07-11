@@ -1,0 +1,11 @@
+.header {
+    width: 95%;
+    height: 80px;
+    margin: 20px auto;
+    padding: 15px;
+    color: aqua;
+    background-color: rgb(83, 18, 195);
+    border: 2px solid black;
+    border-radius: 25px;
+    box-shadow: 2px 4px rgb(83, 18, 195);
+}

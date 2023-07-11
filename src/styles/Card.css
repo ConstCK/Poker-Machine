@@ -1,0 +1,39 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 200px;
+    height: 300px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 4px 2px grey;
+}
+
+.value {
+    margin: 5px;
+}
+
+.top {
+    text-align: left;
+
+}
+
+.bottom {
+    text-align: left;
+    transform: scale(-1, -1);
+
+}
+
+.suit {
+    width: 60%;
+    height: 60%;
+    margin: 0 auto;
+}
+
+.card.true {
+    border: 5px red solid
+}
+
+.card.false {
+    border: 1px grey solid;
+}
