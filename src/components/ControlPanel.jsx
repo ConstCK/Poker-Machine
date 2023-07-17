@@ -55,15 +55,15 @@ function StakePanel() {
       } else {
         winSoundEffect();
         gettingCoins(setCurrentWin, setCurrentBank, coinSoundEffect);
-        store.dispatch({
-          type: "CHANGE_STATUS",
-          payload: {
-            data: false,
-          },
-        });
       }
     }
     if (currentStage == "start") {
+      store.dispatch({
+        type: "CHANGE_STATUS",
+        payload: {
+          data: false,
+        },
+      });
       CardsShufflingEffect();
       if (currentBet > currentBank) {
         setCurrentBet(currentBank);
