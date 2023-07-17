@@ -1,6 +1,7 @@
 import store from "../store/store";
 
 function winControl(cards) {
+  const multiplier = store.getState().bet;
   const values = [];
   const suits = [];
   const prices = [];
@@ -21,7 +22,7 @@ function winControl(cards) {
     ) {
       store.dispatch({
         type: "SET_WIN",
-        payload: { data: 100 },
+        payload: { data: 100 * multiplier },
       });
       store.dispatch({
         type: "CHANGE_STATUS",
@@ -37,7 +38,7 @@ function winControl(cards) {
     ) {
       store.dispatch({
         type: "SET_WIN",
-        payload: { data: 80 },
+        payload: { data: 80 * multiplier },
       });
       store.dispatch({
         type: "CHANGE_STATUS",
@@ -48,7 +49,7 @@ function winControl(cards) {
     } else {
       store.dispatch({
         type: "SET_WIN",
-        payload: { data: 8 },
+        payload: { data: 8 * multiplier },
       });
       store.dispatch({
         type: "CHANGE_STATUS",
@@ -59,22 +60,27 @@ function winControl(cards) {
     }
   } else {
     if (
-      prices[0] + 1 == prices[1] &&
-      prices[1] + 1 == prices[2] &&
-      prices[2] + 1 == prices[3] &&
-      prices[3] + 1 == prices[4]
+      (prices[0] + 1 == prices[1] &&
+        prices[1] + 1 == prices[2] &&
+        prices[2] + 1 == prices[3] &&
+        prices[3] + 1 == prices[4]) ||
+      (values.includes("A") &&
+        values.includes("K") &&
+        values.includes("Q") &&
+        values.includes("J") &&
+        values.includes("10"))
     ) {
       store.dispatch(
         {
           type: "SET_WIN",
-          payload: { data: 7 },
+          payload: { data: 7 * multiplier },
         },
         { type: "CHANGE_STATUS" }
       );
       store.dispatch({
         type: "CHANGE_STATUS",
         payload: {
-          data: "straight",
+          data: "Straight",
         },
       });
     } else {
@@ -96,7 +102,7 @@ function winControl(cards) {
         case 40:
           store.dispatch({
             type: "SET_WIN",
-            payload: { data: 40 },
+            payload: { data: 40 * multiplier },
           });
           store.dispatch({
             type: "CHANGE_STATUS",
@@ -108,7 +114,7 @@ function winControl(cards) {
         case 5:
           store.dispatch({
             type: "SET_WIN",
-            payload: { data: 10 },
+            payload: { data: 10 * multiplier },
           });
           store.dispatch({
             type: "CHANGE_STATUS",
@@ -120,7 +126,7 @@ function winControl(cards) {
         case 3:
           store.dispatch({
             type: "SET_WIN",
-            payload: { data: 3 },
+            payload: { data: 3 * multiplier },
           });
           store.dispatch({
             type: "CHANGE_STATUS",
@@ -132,7 +138,7 @@ function winControl(cards) {
         case 4:
           store.dispatch({
             type: "SET_WIN",
-            payload: { data: 2 },
+            payload: { data: 2 * multiplier },
           });
           store.dispatch({
             type: "CHANGE_STATUS",
@@ -144,7 +150,6 @@ function winControl(cards) {
       }
     }
   }
-  store.dispatch({ type: "GET_WIN" });
 }
 
 export default winControl;

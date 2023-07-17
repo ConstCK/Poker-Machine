@@ -14,8 +14,7 @@ function StatusPanel() {
   useEffect(() => {
     setWinnerStatus;
   }, [winnerStatus]);
-  console.log("Current stage is", currentStage);
-  console.log("Current stage is", winnerStatus);
+
   if (currentStage == "start") {
     return (
       <>
@@ -34,8 +33,8 @@ function StatusPanel() {
     if (winnerStatus) {
       return (
         <div className="status">
-          <marquee scrollamount="20" height="100%">
-            <h1>{`You have got ${store.getState().isWinner}`}</h1>
+          <marquee scrollamount="60" height="100%">
+            <h1>{store.getState().isWinner}</h1>
           </marquee>
         </div>
       );

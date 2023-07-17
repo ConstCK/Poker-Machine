@@ -3,9 +3,9 @@
     height: 80px;
     margin: 20px auto;
     padding: 15px;
-    color: aqua;
-    background-color: rgb(83, 18, 195);
+    color: rgb(213, 17, 17);
+    background-color: rgb(27, 143, 245);
     border: 2px solid black;
     border-radius: 25px;
-    box-shadow: 2px 4px rgb(83, 18, 195);
+    box-shadow: 2px 4px rgb(5, 43, 144);
 }

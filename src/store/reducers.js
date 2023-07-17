@@ -1,6 +1,6 @@
 let initialState = {
   bet: 1,
-  bank: 20,
+  bank: 100,
   win: 0,
   isWinner: false,
   mainHand: [null, null, null, null, null],
@@ -26,7 +26,7 @@ function pokerReducer(state = initialState, action) {
     return newState;
   }
   if (action.type == "LAST_BET") {
-    let currentBet = state.bank;
+    let currentBet = action.payload.data;
     const newState = { ...state, bet: currentBet };
     return newState;
   }
@@ -36,12 +36,12 @@ function pokerReducer(state = initialState, action) {
     return newState;
   }
   if (action.type == "SET_WIN") {
-    let currentWin = action.payload.data * state.bet;
+    let currentWin = action.payload.data;
     const newState = { ...state, win: currentWin };
     return newState;
   }
   if (action.type == "GET_WIN") {
-    let currentBank = state.win + state.bank;
+    let currentBank = state.bank + action.payload.data;
     const newState = { ...state, bank: currentBank };
     return newState;
   }
