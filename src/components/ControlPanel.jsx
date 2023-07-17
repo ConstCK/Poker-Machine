@@ -4,7 +4,7 @@ import "../styles/ControlPanel.css";
 import increaseBetSound from "../assets/sounds/IncreaseBet.mp3";
 import decreaseBetSound from "../assets/sounds/DecreaseBet.mp3";
 import goSound from "../assets/sounds/GoSound.mp3";
-import holdSound from "../assets/sounds/ButtonSound.mp3";
+import holdSound from "../assets/sounds/ButtonSound2.mp3";
 import WinSound from "../assets/sounds/WinSound.mp3";
 import LostSound from "../assets/sounds/LostSound.mp3";
 import LostGameSound from "../assets/sounds/LostGameSound.mp3";
