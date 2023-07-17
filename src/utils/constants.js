@@ -83,9 +83,9 @@ const dummyHand = [
 ];
 
 const STATUS_MESSAGE = {
-  start: "Make your bet & go...",
-  change: "Select cards",
-  loser: "Loser...",
+  start: "Place your bets & go...",
+  change: "Select cards to hold",
+  loser: "Lost",
   winner: "Congratulations",
   zero: "Game over!",
 };
